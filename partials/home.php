@@ -7,7 +7,7 @@
     <h4 class="italic">Physical <span class="gold-text">Gold</span> Spot Price</h4>
 
     <div>
-      <!-- <button id="sound-off"><small><i class="fa fa-volume-off"></i> sound off</small> </button><br> -->
+      <a id="sound" on-click="soundMute()"><i class="fa fa-volume-off"></i> sound off </a><br>
       <img id="bell" src="img/bell.png">
     </div>
 

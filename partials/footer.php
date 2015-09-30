@@ -97,6 +97,26 @@
 <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
 <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
 <script src="js/app.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    console.log( "Volume off" );
+    //Sound off
+    // $(".sound").click(function(){
+    //   // audio.muted = true;
+    //   // audio.volume = 0;
+    //   alert("Volume off");
+    // });
+
+    $( ".sound" ).on( "click", function() {
+      console.log( "Volume off" );
+    });
+
+    function soundMute(){
+      //sound off
+      console.log( "Volume off" );
+    }
+  });
+</script>
 
 </body>
 </html>
