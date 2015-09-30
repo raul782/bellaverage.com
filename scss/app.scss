@@ -1,0 +1,71 @@
+// *************************************
+//
+//   UNIVERSAL COLOR THEMES
+//
+//
+// *************************************
+$dark-blue: #141D67;
+$dark-blue-text: #9FA8DA;
+$hayek-light-blue: #2196F3;
+$indigo-blue: #3E4EB8;
+$main-blue: #1A237E;
+$main-text: #75787b;
+$main-text-dark: #29303f;
+$light-gray: #FAFAFA;
+$light-gray-text: #A2A6AF;
+$gold: #F9A825;
+$gold-hover: #EF9606;
+$gold-text: #8B5704;
+$blueBtn: #2196F3;
+$tabs-color: #EEE;
+$tabs-color-text: $main-text;
+$tabs-color-hover: #E0E0E0;
+
+// *************************************
+
+@import "settings";
+// @import "foundation";
+
+// Or selectively include components
+@import
+  // "foundation/components/accordion",
+  // "foundation/components/alert-boxes",
+  "foundation/components/block-grid",
+  // "foundation/components/breadcrumbs",
+  // "foundation/components/button-groups",
+  "foundation/components/buttons",
+  "foundation/components/clearing",
+  "foundation/components/dropdown",
+  "foundation/components/dropdown-buttons",
+  // "foundation/components/flex-video",
+  "foundation/components/forms",
+  "foundation/components/grid",
+  "foundation/components/inline-lists",
+  // "foundation/components/joyride",
+  // "foundation/components/keystrokes",
+  // "foundation/components/labels",
+  // "foundation/components/magellan",
+  // "foundation/components/orbit",
+  // "foundation/components/pagination",
+  "foundation/components/panels",
+  // "foundation/components/pricing-tables",
+  // "foundation/components/progress-bars",
+  // "foundation/components/reveal",
+  "foundation/components/side-nav",
+  // "foundation/components/split-buttons",
+  "foundation/components/sub-nav",
+  // "foundation/components/switches",
+  // "foundation/components/tables",
+  // "foundation/components/tabs",
+  // "foundation/components/thumbs",
+  // "foundation/components/tooltips",
+  "foundation/components/top-bar",
+  "foundation/components/type",
+  // "foundation/components/offcanvas",
+  "foundation/components/visibility";
+
+@import "functions";
+@import "main";
+@import "mobile";
+@import "tablet";
+@import "desktop";

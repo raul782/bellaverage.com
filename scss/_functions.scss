@@ -1,0 +1,61 @@
+@function aspect($width) {
+  @return $width * 9 / 16;
+}
+
+@mixin verticalPadding($space:30px) {
+  padding-top: $space;
+  padding-bottom: $space;
+}
+
+@mixin verticalMargin($space:30px) {
+  margin-top: $space;
+  margin-bottom: $space;
+}
+
+@mixin sidePadding($space:30px) {
+  padding-left: $space;
+  padding-right: $space;
+}
+
+@mixin sideMargin($space:30px) {
+  margin-left: $space;
+  margin-right: $space;
+}
+
+@mixin borderBottom($color:$success-color){
+  border-bottom: 4px solid rgba(black, 0.3);
+}
+
+@mixin placeholderColor($x:black){
+
+  $color: rgba($x, 0.5);
+
+  input::-webkit-input-placeholder { color: $color; }
+  input::-moz-placeholder { color: $color; } /* firefox 19+ */
+  input:-ms-input-placeholder { color: $color; } /* ie */
+  input:-moz-placeholder { color: $color; }
+
+  textarea::-webkit-input-placeholder { color: $color; }
+  textarea::-moz-placeholder { color: $color; } /* firefox 19+ */
+  textarea:-ms-input-placeholder { color: $color; } /* ie */
+  textarea:-moz-placeholder { color: $color; }
+}
+
+
+@mixin banner-image($imageName, $size: large){
+    $image-url: "../../../images_responsive/title_bg/#{$imageName}-#{$size}.jpg";
+
+    // needs latest Compass, add '@import "compass"' to your scss
+    @include filter-gradient(rgba(black, 0.5), rgba(black, 0), horizontal); // IE6-9
+    @include background-image(linear-gradient(left,  rgba(0,0,0,0.5) 50%,rgba(0,0,0,0) 100%), url($image-url));
+    background-size: cover;
+}
+
+// VErtical Alignment
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

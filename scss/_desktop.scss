@@ -1,0 +1,221 @@
+// -------------------------------------
+//   DESKTOP MEDIA QUERY
+// -------------------------------------
+
+
+@media #{$large-up} {
+
+	// ----- CONTAINER ----- //
+	.container{
+		.callout{
+			@include grid-column(10, $center:true);
+		}
+	}
+
+	// ----- TOP BAR ----- //
+	#top_bar > div{
+		@include grid-row();
+
+		.tel{
+			@include grid-column(2,  $float: left);
+		}
+		span{
+			@include grid-column(2);
+		}
+		.links{
+			@include grid-column(3,  $float: right);
+		}
+	}
+	#top_bar ul.f-dropdown.open {
+		margin-right: 50px;
+	}
+
+
+
+
+	// ----- HEADER ----- //
+	#header{
+		nav{
+			.title-area{
+				.name{
+					img{
+						padding-top: 5px;
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+
+	// ----- CTA / BUY GOLD CALL TO ACTION ----- //
+	#cta{
+		margin-top: -70px;
+		> div{
+			// h1{margin-top: 80px;}
+			div{
+				@include grid-column(12);
+				padding-top: 30px;
+			}
+			.button{
+				padding: 20px 32px 18px 32px;
+			}
+		}
+	}
+
+
+
+
+
+
+	// ----- FEATURES IN NEWS SECTION ----- //
+	.featured-news{
+		> div{
+			height: 150px;
+			p{
+				margin: 20px 0 0 0;
+			}
+			.news-logos{
+				@include block-grid(6);
+				@include verticalMargin(20px);
+			}
+		}
+	}
+
+
+
+
+
+	// ----- TITLE BANNER ----- //
+	// .title-banner{
+	// 	&.pricing{
+	// 		@include banner-image(pricing, large);
+	// 	}
+	// 	&.anthemvault-secure{
+	// 		@include banner-image(anthemvault-secure, large);
+	// 	}
+	// 	&.transparency{
+	// 		@include banner-image(transparency, large);
+	// 	}
+	// }
+
+
+
+
+
+
+
+	// ----- FEATURES ----- //
+	.features{
+		> div{
+			@include verticalPadding(100px);
+			.c-5{
+				@include grid-column(5, $push:1);
+				margin-top: 20px;
+
+				p{
+					padding-right: 100px;
+				}
+			}
+			.c-7{
+				@include grid-column(5, $push:1);
+			}
+		}
+	}
+
+
+
+	// ----- VAULT SECTIONS ----- //
+	.vault{
+		@include verticalPadding(60px);
+
+		// SIDE MENU
+		.aside{
+			@include grid-column(3, $collapse:true);
+		}
+		aside{
+			@include grid-column(3);
+		}
+
+		// OFF CANVAS MENU
+		.right-off-canvas-menu, .left-off-canvas-menu{
+			display: none;
+		}
+
+		// MAIN SECTION
+		section{
+			@include grid-column(9);
+			padding: 40px 60px;
+
+			// Datalist for Directors Page
+
+			// Icon Colors
+
+			// Founder Avatar for About Section
+		}
+	}
+
+
+
+
+
+
+	// ----- BOTTOM CTA ----- //
+	.bottom-cta{
+		> div{
+			h3{
+				font-size: $h3-font-size + 0.3;
+			}
+			h5{
+				font-size: $h5-font-size + 0.1;
+			}
+
+		}
+	}
+
+
+
+
+
+	// ----- FOOTER ----- //
+	#footer{
+		> div{
+			.footer-info,
+			.footer-company,
+			.footer-legal{
+				@include grid-column(2);
+			}
+			.footer-social,
+			.footer-contact{
+				@include grid-column(3);
+			}
+			.footer-social{
+				.email{
+					@include grid-column(7, $collapse: true);
+				}
+				.envelope{
+					@include grid-column(2, $collapse: true);
+				}
+			}
+		}
+
+		.trust-logos{
+			padding-top: 80px;
+			> div{
+				@include grid-column(2);
+			}
+			.seal{
+				@include grid-column(4, $float:right);
+				.trusted{
+					margin: -85px auto 30px auto;
+					float: right;
+				}
+			}
+
+		}
+	}
+
+
+} // End desktop media query
