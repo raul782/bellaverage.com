@@ -7,10 +7,11 @@
     <h4 class="italic">Physical <span class="gold-text">Gold</span> Spot Price</h4>
 
     <div>
+      <!-- <button id="sound-off"><small><i class="fa fa-volume-off"></i> sound off</small> </button><br> -->
       <img id="bell" src="img/bell.png">
     </div>
 
-    <h3><img src="img/AV_logo.png" alt="logo"/><span>'s Propritary Spot Pricing System (SPS)</span></h3>
+    <h3><img src="img/AV_logo.png" alt="logo"/><span>'s Proprietary Spot Pricing System (SPS)</span></h3>
 
     <!-- PRICING -->
     <div class="row">
