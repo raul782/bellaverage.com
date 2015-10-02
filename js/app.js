@@ -5,7 +5,7 @@ $(document).ready(function(){
 	var audio = new Audio('audio/ding.mp3');
 
 
-
+	//Swing Bell and Play Sound
 	function swingBell(){
 	 	//Animate bell
 		bell.addClass("animated swing");
@@ -22,19 +22,17 @@ $(document).ready(function(){
 	// Play bell first
 	swingBell();
 
-	//Sound off
-	$('#sound').click(function(){
-		audio.muted = true;
-		audio.volume = 0;
-	});
-
-	$( "#sound" ).on( "click", function() {
-		console.log( "Volume off" );
-	});
-
 	//Loop bell ding every 60 seconds
 	window.setInterval(function(){ swingBell(); }, 20 * 1000);
 
-
+	//Sound Toggle on / off
+	$('#play').click(function(){
+			$(this).toggleClass("pause");
+			if( audio.volume === 0 ){
+				audio.volume = 1;
+			}else{
+				audio.volume = 0;
+			}
+	});
 
 });

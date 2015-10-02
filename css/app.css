@@ -3930,6 +3930,24 @@ form label.error {
   -webkit-transition: 0.3s;
   transition: 0.3s; }
 
+.btn-clear {
+  color: #F9A825;
+  background: transparent;
+  border: 1px solid #F9A825;
+  transition: all 0.5s ease;
+  padding-top: 11px; }
+  .btn-clear:hover {
+    background: #F9A825;
+    color: #FFF;
+    transition: all 0.5s ease; }
+  .btn-clear.silver {
+    color: white;
+    border-color: white; }
+    .btn-clear.silver:hover {
+      background: #EFEFEF;
+      color: gray;
+      transition: all 0.5s ease; }
+
 @media only screen {
   body {
     background-color: #152065; }
@@ -3965,30 +3983,31 @@ form label.error {
           height: 38px; }
           #top_bar ul.f-dropdown a i {
             margin-right: 10px; }
-  #header.transparent-header {
-    background: transparent !important; }
-    #header.transparent-header .top-bar, #header.transparent-header nav {
+  #header {
+    border-bottom: 1px solid rgba(34, 76, 165, 0.5);
+    background: #1a237e; }
+    #header .top-bar, #header nav {
       background: transparent !important; }
-      #header.transparent-header .top-bar .top-bar-section ul li:not(.sign-up), #header.transparent-header nav .top-bar-section ul li:not(.sign-up) {
+      #header .top-bar .top-bar-section ul li:not(.sign-up), #header nav .top-bar-section ul li:not(.sign-up) {
         background: transparent !important; }
-        #header.transparent-header .top-bar .top-bar-section ul li:not(.sign-up) a, #header.transparent-header nav .top-bar-section ul li:not(.sign-up) a {
+        #header .top-bar .top-bar-section ul li:not(.sign-up) a, #header nav .top-bar-section ul li:not(.sign-up) a {
           background: transparent !important;
           transition: all 0.5s ease; }
-          #header.transparent-header .top-bar .top-bar-section ul li:not(.sign-up) a:hover, #header.transparent-header nav .top-bar-section ul li:not(.sign-up) a:hover {
+          #header .top-bar .top-bar-section ul li:not(.sign-up) a:hover, #header nav .top-bar-section ul li:not(.sign-up) a:hover {
             color: #F9A825;
             transition: all 0.5s ease; }
-      #header.transparent-header .top-bar .sign-up a, #header.transparent-header nav .sign-up a {
+      #header .top-bar .sign-up a, #header nav .sign-up a {
         color: #F9A825;
         background: transparent;
         border: 1px solid #F9A825;
         transition: all 0.5s ease;
         height: 39px;
         top: 9px; }
-        #header.transparent-header .top-bar .sign-up a:hover, #header.transparent-header nav .sign-up a:hover {
+        #header .top-bar .sign-up a:hover, #header nav .sign-up a:hover {
           background: #F9A825;
           color: #FFF;
           transition: all 0.5s ease; }
-      #header.transparent-header .top-bar .clear-gold a, #header.transparent-header nav .clear-gold a {
+      #header .top-bar .clear-gold a, #header nav .clear-gold a {
         color: #F9A825;
         background: transparent;
         border: 1px solid #F9A825;
@@ -3996,51 +4015,66 @@ form label.error {
         height: 50px;
         padding-top: 11px;
         top: 9px; }
-        #header.transparent-header .top-bar .clear-gold a:hover, #header.transparent-header nav .clear-gold a:hover {
+        #header .top-bar .clear-gold a:hover, #header nav .clear-gold a:hover {
           background: #F9A825;
           color: #FFF;
           transition: all 0.5s ease; }
-  #header .name img {
-    padding-top: 5px;
-    padding-left: 10px; }
-  #header .top-bar {
-    padding-top: 5px;
-    margin-bottom: 12px; }
-  #header .top-bar-section a {
-    font-weight: 300;
-    letter-spacing: 0.05em; }
-  #header .sign-up {
-    background: none;
-    margin-left: 10px;
-    margin-right: 10px; }
-    #header .sign-up a {
-      padding: 10px 20px;
-      font-size: 90%;
+    #header .name img {
+      padding-top: 5px;
+      padding-left: 10px; }
+    #header .top-bar {
+      padding-top: 5px;
+      margin-bottom: 12px; }
+    #header .top-bar-section a {
       font-weight: 300;
       letter-spacing: 0.05em; }
-      #header .sign-up a:hover {
-        background: #EF9606; }
-  #header .top-bar-section li:not(.has-form) a:not(.button):hover,
-  #header .top-bar-section ul li:hover:not(.has-form) > a:not(.button),
-  #header .top-bar-section ul li:hover {
-    background-color: transparent !important; }
-  #header .top-bar-section ul li:hover:not(.has-form) > a:not(.button) {
-    color: #F9A825;
-    transition: all 0.5s ease;
-    cursor: pointer; }
-  #header .top-bar-section ul li a {
-    cursor: pointer; }
+    #header .sign-up {
+      background: none;
+      margin-left: 10px;
+      margin-right: 10px; }
+      #header .sign-up a {
+        padding: 10px 20px;
+        font-size: 90%;
+        font-weight: 300;
+        letter-spacing: 0.05em; }
+        #header .sign-up a:hover {
+          background: #EF9606; }
+    #header .top-bar-section li:not(.has-form) a:not(.button):hover,
+    #header .top-bar-section ul li:hover:not(.has-form) > a:not(.button),
+    #header .top-bar-section ul li:hover {
+      background-color: transparent !important; }
+    #header .top-bar-section ul li:hover:not(.has-form) > a:not(.button) {
+      color: #F9A825;
+      transition: all 0.5s ease;
+      cursor: pointer; }
+    #header .top-bar-section ul li a {
+      cursor: pointer; }
   #cta {
-    background-color: #1a237e;
-    z-index: -2;
+    background: #1a237e;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #1a237e 0%, #224ca5 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1a237e), color-stop(100%, #224ca5));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #1a237e 0%, #224ca5 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #1a237e 0%, #224ca5 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #1a237e 0%, #224ca5 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #1a237e 0%, #224ca5 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a237e', endColorstr='#224ca5',GradientType=0 );
+    /* IE6-9 */
+    z-index: 5;
     display: block;
     position: relative;
     padding-top: 40px;
     padding-bottom: 40px; }
     #cta::after {
       content: "";
-      background-image: url("http://www.dubaigoldprices.com/wp-content/uploads/2012/08/kh96n9ln-488x240.jpg");
-      opacity: 0.25;
+      background-image: url("../../../img/gold-bullion.jpg");
+      opacity: 0.05;
       top: 0;
       left: 0;
       bottom: 0;
@@ -4049,58 +4083,39 @@ form label.error {
       background-position: center top;
       background-repeat: no-repeat;
       position: absolute;
-      z-index: -1; }
-    #cta div {
-      margin: 0 auto;
-      max-width: 75rem;
-      width: 100%; }
-      #cta div:before, #cta div:after {
-        content: " ";
-        display: table; }
-      #cta div:after {
-        clear: both; }
-      #cta div h1 {
-        color: white;
-        font-size: 4.35rem;
-        font-weight: 400; }
-      #cta div h4, #cta div h3 {
-        color: #FFF;
-        font-weight: 300; }
-      #cta div h1 .gold-text, #cta div h2 .gold-text, #cta div h3 .gold-text, #cta div h4 .gold-text, #cta div h5 .gold-text {
-        color: #F9A825; }
-      #cta div h3 > img {
-        padding-bottom: 6px; }
-      #cta div .panel-prices {
-        background: rgba(249, 168, 37, 0.4);
-        border: none;
-        color: white;
-        height: auto; }
-      #cta div ul {
-        padding-left: 0.9375rem;
-        padding-right: 0.9375rem;
-        width: 66.6666666667%;
-        float: left;
-        margin-top: 20px;
-        font-style: italic;
-        font-size: 110%;
-        color: white; }
-        #cta div ul li {
-          padding-bottom: 5px; }
-        #cta div ul .fa {
-          padding-right: 10px; }
-      #cta div .button {
-        font-size: 140%;
-        font-weight: 300;
-        text-transform: uppercase;
-        border-radius: 8px;
-        margin: 10px 0;
-        padding-top: 20px;
-        padding-bottom: 20px; }
-        #cta div .button span {
-          display: block;
-          font-size: 40%;
-          font-weight: 400;
-          padding-left: 24px; }
+      z-index: -3; }
+    #cta div h1 {
+      margin-top: 30px;
+      color: white;
+      font-size: 4.05rem;
+      font-weight: 400; }
+    #cta div h4, #cta div h3 {
+      color: white;
+      font-weight: 300; }
+    #cta div h1 .gold-text, #cta div h2 .gold-text, #cta div h3 .gold-text, #cta div h4 .gold-text, #cta div h5 .gold-text {
+      color: #F9A825; }
+    #cta div h3 > img {
+      padding-bottom: 6px; }
+    #cta div .panel-prices {
+      background: rgba(249, 168, 37, 0.4);
+      border: none;
+      color: white;
+      height: auto; }
+    #cta div h4 {
+      margin-bottom: 40px; }
+    #cta div ul {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
+      width: 66.6666666667%;
+      float: left;
+      margin-top: 20px;
+      font-style: italic;
+      font-size: 110%;
+      color: white; }
+      #cta div ul li {
+        padding-bottom: 5px; }
+      #cta div ul .fa {
+        padding-right: 10px; }
     #cta .video-link {
       padding-top: 10px;
       padding-bottom: 80px; }
@@ -4109,6 +4124,60 @@ form label.error {
         font-size: 80%; }
         #cta .video-link a .fa {
           font-size: 130%; }
+  .div-r {
+    border-right: 1px solid rgba(255, 255, 255, 0.2); }
+  .bell-prices {
+    padding: 10px 30px 0;
+    color: white; }
+    .bell-prices hr {
+      margin: 0 50px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 20px; }
+    .bell-prices .currency {
+      padding: 0 35px;
+      height: 40px;
+      line-height: 1;
+      font-size: 40px;
+      display: block;
+      float: left;
+      font-weight: 400;
+      margin: 0 auto; }
+      .bell-prices .currency.dollar {
+        padding: 0 65px; }
+      .bell-prices .currency.dollar:before {
+        content: '$';
+        font-size: 20px;
+        margin-top: 2px;
+        display: block;
+        float: left; }
+      .bell-prices .currency b {
+        margin-top: -20px; }
+      .bell-prices .currency small {
+        display: block;
+        font-size: 20px;
+        float: left;
+        padding-top: 10px; }
+      .bell-prices .currency .fa, .bell-prices .currency i {
+        font-size: 15px;
+        display: block;
+        margin-top: 13px;
+        float: right; }
+        .bell-prices .currency .fa::before, .bell-prices .currency i::before {
+          padding-left: 5px; }
+        .bell-prices .currency .fa.fa-caret-up, .bell-prices .currency i.fa-caret-up {
+          color: #00E676; }
+        .bell-prices .currency .fa.fa-caret-down, .bell-prices .currency i.fa-caret-down {
+          color: #F44336; }
+    .bell-prices .description {
+      padding-left: 85px;
+      display: block;
+      clear: left;
+      float: left;
+      font-weight: 300;
+      font-size: 12px;
+      padding-top: 4px; }
+    .bell-prices .button {
+      margin-top: 5px; }
   .featured-news > div {
     margin: 0 auto;
     max-width: 75rem;
@@ -4129,10 +4198,9 @@ form label.error {
       padding-top: 40px;
       margin-top: 0;
       text-align: center;
-      color: #d9dadc;
-      text-transform: uppercase;
+      color: #AAA;
       font-weight: 300;
-      letter-spacing: 2px; }
+      font-size: 31px; }
     .features > div {
       margin: 0 auto;
       max-width: 75rem;
@@ -4353,7 +4421,9 @@ form label.error {
       padding: 20px 43px 21px 43px;
       border-radius: 8px; }
   #footer {
-    padding-top: 50px; }
+    background: #1A237E;
+    padding-top: 50px;
+    padding-bottom: 50px; }
     #footer > div {
       margin: 0 auto;
       max-width: 75rem;
@@ -4370,6 +4440,9 @@ form label.error {
     #footer small {
       display: block;
       color: #9FA8DA; }
+    #footer .inline-list li {
+      margin-left: 0;
+      margin-right: 20px; }
     #footer .newsletter {
       margin: 0 auto;
       max-width: 75rem;
@@ -4390,23 +4463,94 @@ form label.error {
         #footer .newsletter .postfix i {
           color: white; }
     #footer .logo {
-      margin-top: 20px;
       width: 70%; }
-    #footer hr {
-      margin: 0 auto;
-      max-width: 75rem;
+  #play {
+    float: left;
+    color: rgba(255, 255, 255, 0.5); }
+    #play:before {
+      content: "\f028";
+      font-family: "FontAwesome";
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.5);
+      transition: all 0.5s ease; }
+    #play:hover {
+      color: rgba(255, 255, 255, 0.5) !important; }
+    #play.pause {
+      color: rgba(255, 255, 255, 0.5); }
+      #play.pause:before {
+        content: "\f026";
+        font-family: "FontAwesome";
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.5); }
+      #play.pause:hover {
+        color: rgba(255, 255, 255, 0.5) !important; } }
+
+@media only screen and (max-width: 40em) {
+  #cta > div h1 {
+    font-size: 44px; }
+    #cta > div h1 img {
+      width: 40px; }
+  .div-r {
+    border: none; }
+  .bell-prices {
+    margin: 0 !important;
+    padding: 0; }
+    .bell-prices .currency {
       width: 100%;
-      margin-top: 40px;
-      margin-bottom: 40px;
-      border: 0; }
-      #footer hr:before, #footer hr:after {
-        content: " ";
-        display: table; }
-      #footer hr:after {
-        clear: both; }
-    #footer .bottom-bar {
-      background: #141D67;
-      padding: 10px 0; } }
+      text-align: left; }
+      .bell-prices .currency.dollar {
+        padding: 0 8px;
+        text-align: right; }
+        .bell-prices .currency.dollar:before {
+          text-align: right;
+          display: inline;
+          float: none; }
+    .bell-prices .description {
+      padding-left: 0;
+      padding-right: 7px;
+      text-align: right;
+      float: right;
+      margin-bottom: 10px; }
+    .bell-prices .button {
+      display: none; }
+  .features h2 {
+    font-size: 26px !important;
+    padding: 0 15px; }
+  .features > div {
+    padding: 15px; }
+  #footer .logo {
+    width: 60%; }
+  #footer > div .columns {
+    margin-bottom: 20px; } }
+
+@media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+  .bell-prices .currency.dollar {
+    padding: 0 8px; }
+  .bell-prices .description {
+    padding-left: 28px; }
+  .features h2 {
+    padding: 0 40px; }
+  .features > div {
+    padding: 40px; }
+    .features > div .c-5 {
+      position: relative;
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
+      width: 41.6666666667%;
+      left: 8.3333333333%;
+      right: auto;
+      float: left;
+      margin-top: 20px; }
+      .features > div .c-5 p {
+        padding-right: 100px; }
+    .features > div .c-7 {
+      position: relative;
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
+      width: 41.6666666667%;
+      left: 8.3333333333%;
+      right: auto;
+      float: left; } }
 
 @media only screen and (min-width: 64.0625em) {
   .container .callout {
@@ -4445,16 +4589,6 @@ form label.error {
     margin-right: 50px; }
   #header nav .title-area .name img {
     padding-top: 5px; }
-  #cta {
-    margin-top: -70px; }
-    #cta > div div {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem;
-      width: 100%;
-      float: left;
-      padding-top: 30px; }
-    #cta > div .button {
-      padding: 20px 32px 18px 32px; }
   .featured-news > div {
     height: 150px; }
     .featured-news > div p {
@@ -4484,8 +4618,8 @@ form label.error {
         .featured-news > div .news-logos > li:nth-of-type(6n+1) {
           clear: both; }
   .features > div {
-    padding-top: 100px;
-    padding-bottom: 100px; }
+    padding-top: 20px;
+    padding-bottom: 20px; }
     .features > div .c-5 {
       position: relative;
       padding-left: 0.9375rem;
@@ -4508,16 +4642,6 @@ form label.error {
   .vault {
     padding-top: 60px;
     padding-bottom: 60px; }
-    .vault .aside {
-      padding-left: 0;
-      padding-right: 0;
-      width: 25%;
-      float: left; }
-    .vault aside {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem;
-      width: 25%;
-      float: left; }
     .vault .right-off-canvas-menu, .vault .left-off-canvas-menu {
       display: none; }
     .vault section {
@@ -4530,41 +4654,13 @@ form label.error {
     font-size: 1.9875rem; }
   .bottom-cta > div h5 {
     font-size: 1.225rem; }
-  #footer > div .footer-info,
-  #footer > div .footer-company,
-  #footer > div .footer-legal {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 16.6666666667%;
-    float: left; }
-  #footer > div .footer-social,
-  #footer > div .footer-contact {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-    width: 25%;
-    float: left; }
-  #footer > div .footer-social .email {
+  #footer > div .columns.social .email {
     padding-left: 0;
     padding-right: 0;
     width: 58.3333333333%;
     float: left; }
-  #footer > div .footer-social .envelope {
+  #footer > div .columns.social .envelope {
     padding-left: 0;
     padding-right: 0;
     width: 16.6666666667%;
-    float: left; }
-  #footer .trust-logos {
-    padding-top: 80px; }
-    #footer .trust-logos > div {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem;
-      width: 16.6666666667%;
-      float: left; }
-    #footer .trust-logos .seal {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem;
-      width: 33.3333333333%;
-      float: right; }
-      #footer .trust-logos .seal .trusted {
-        margin: -85px auto 30px auto;
-        float: right; } }
+    float: left; } }

@@ -1,0 +1,35 @@
+@media #{$medium-only} {
+
+.bell-prices{
+  .currency{
+    &.dollar{
+      padding: 0 8px;
+    }
+  }
+  .description{
+    padding-left: 28px;
+  }
+}
+
+
+// ----- FEATURES ----- //
+.features{
+  h2{ padding: 0 40px;}
+  > div{
+    padding: 40px;
+
+    .c-5{
+      @include grid-column(5, $push:1);
+      margin-top: 20px;
+
+      p{
+        padding-right: 100px;
+      }
+    }
+    .c-7{
+      @include grid-column(5, $push:1);
+    }
+  }
+}
+
+}

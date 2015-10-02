@@ -1,0 +1,63 @@
+@media #{$small-only} {
+#cta{
+  > div h1{
+    font-size: 44px;
+    img{ width: 40px;}
+  }
+}
+
+    .div-r{
+      border:none;
+    }
+
+    .bell-prices{
+      margin: 0 !important;
+      padding: 0;
+
+      .currency{
+          width: 100%;
+          text-align: left;
+        &.dollar{
+          padding: 0 8px;
+          text-align: right;
+          &:before {
+            text-align: right;
+            display: inline;
+            float: none;
+          }
+        }
+      }
+      .description{
+        padding-left: 0;
+        padding-right: 7px;
+        text-align: right;
+        float: right;
+        margin-bottom: 10px;
+      }
+      .button{ display:none;}
+
+    }
+
+
+    .features{
+      h2{
+        font-size: 26px !important;
+        padding: 0 15px;
+      }
+      > div{
+        padding: 15px;
+      }
+    }
+
+
+    #footer{
+      .logo{ width: 60%;}
+      > div{
+        .columns{
+            margin-bottom: 20px;
+        }
+      }
+    }
+
+
+}

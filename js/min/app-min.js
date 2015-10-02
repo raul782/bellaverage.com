@@ -1,1 +1,0 @@
-$(document).foundation(),$(document).ready(function(){function n(){o.addClass("animated swing"),e.play(),setTimeout(function(){o.removeClass("animated swing")},1200)}var o=$("#bell"),e=new Audio("audio/ding.mp3");n(),$("#sound").click(function(){e.muted=!0,e.volume=0}),$("#sound").on("click",function(){console.log("Volume off")}),window.setInterval(function(){n()},2e4)});
